@@ -56,7 +56,7 @@ export const menuCategories: MenuCategory[] = [
       {
         id: "fr-chicken",
         name: "Chicken Fried",
-        image: "/dish-plating.jpg",
+        image: "/friedrice.jpg",
         pricing: {
           kind: "sized",
           sizes: [
@@ -118,6 +118,7 @@ export const menuCategories: MenuCategory[] = [
       {
         id: "ko-chicken",
         name: "Chicken Kottu",
+        image: "/kottu.jpg",
         pricing: {
           kind: "sized",
           sizes: [
@@ -250,6 +251,7 @@ export const menuCategories: MenuCategory[] = [
       {
         id: "pa-chicken",
         name: "Chicken Pasta",
+        image: "/chickenpasta.jpg",
         pricing: { kind: "single", price: 1000 },
       },
       {
@@ -342,6 +344,7 @@ export const menuCategories: MenuCategory[] = [
       {
         id: "ck-chicken",
         name: "Chicken",
+        image: "/chicken.jpg",
         pricing: { kind: "single", price: 1550 },
       },
       {
@@ -395,7 +398,7 @@ export const menuCategories: MenuCategory[] = [
         id: "sp-thai-rice",
         name: "Thai Rice",
         description: "A mix of chicken, fish, prawns, sausage, and cuttlefish.",
-        image: "/dish-fine-dining.jpg",
+        image: "/thairice.jpg",
         pricing: { kind: "single", price: 1950 },
       },
       {
@@ -682,6 +685,7 @@ export const menuCategories: MenuCategory[] = [
       {
         id: "fj-mango",
         name: "Mango",
+        image: "/mango.jpg",
         pricing: { kind: "single", price: 250 },
       },
       {
