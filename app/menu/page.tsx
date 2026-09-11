@@ -19,9 +19,7 @@ export default function MenuPage() {
           Something for everyone
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-charcoal/70">
-          Prices below are placeholder figures used to build this page —
-          they&apos;ll be updated with the real menu shortly. All dishes are
-          prepared fresh to order.
+          All dishes are prepared fresh to order.
         </p>
       </div>
 

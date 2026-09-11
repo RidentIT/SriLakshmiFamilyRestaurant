@@ -7,12 +7,12 @@ import { menuCategories } from "@/data/menu";
 import { RESTAURANT } from "@/data/restaurant";
 
 const FEATURED_ITEM_IDS = [
-  "rc-chicken",
-  "rc-special",
-  "kn-chicken-kottu",
-  "kn-special-kottu",
-  "rc-vegetable",
-  "bs-fruit-juice",
+  "fr-chicken",
+  "ko-chicken",
+  "sp-thai-rice",
+  "ck-chicken",
+  "pa-chicken",
+  "fj-mango",
 ];
 
 const featuredItems = menuCategories

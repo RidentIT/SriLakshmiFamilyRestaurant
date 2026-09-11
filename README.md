@@ -35,22 +35,25 @@ npm run lint    # eslint
 
 ## Updating the menu
 
-All menu content lives in one file: **[`data/menu.ts`](data/menu.ts)**.
-
-Everything currently in there is **placeholder data**, clearly marked with
-`placeholder: true` on each item — replace it with the real menu. The file
-defines three pricing shapes so it can represent any item on this menu:
+All menu content lives in one file: **[`data/menu.ts`](data/menu.ts)** — it
+holds the real, current menu (16 categories, 80 items). The file defines
+three pricing shapes so it can represent any item on this menu:
 
 - `single` — one flat price (e.g. a soft drink).
 - `sized` — a fixed set of sizes with different prices (e.g. Normal / Full).
 - `variant` — a choice of named variants, each with its own price (e.g.
-  Chicken / Seafood / Mixed).
+  Chicken / Seafood / Mixed / Special).
 
 Add or edit categories and items directly in that file; the menu page,
 search, and the home page's "Featured Dishes" section (which pulls a
 hand-picked set of item IDs from this same file, see `app/page.tsx`) will
 pick up the changes automatically. No other file needs to change for a menu
 update.
+
+**Needs an owner decision:** the `Buffet` category in `data/menu.ts` has a
+comment flagging that its Rs.450 / Rs.550 Vegetarian / Non-Vegetarian
+pricing was an interpretation of an ambiguous source menu — confirm that's
+correct before treating it as final.
 
 Restaurant details (address, phone, hours, services, map links) live in
 **[`data/restaurant.ts`](data/restaurant.ts)** — update that file if any of
@@ -70,10 +73,13 @@ those details change.
   `public/hero-video.mp4` layered on top once it's playable (absent right
   now — the hero gracefully shows the fallback image only, which is a
   complete design on its own).
-- **Dish photos** — two menu items in `data/menu.ts` (`rc-chicken`,
-  `rc-special`) use real photos (`dish-plating.jpg`, `dish-fine-dining.jpg`);
-  the rest still use the warm maroon/gold SVG placeholders. Update the
-  `image` field per item as real, dish-specific photography comes in.
+- **Dish photos** — two menu items in `data/menu.ts` (`fr-chicken` Chicken
+  Fried, `sp-thai-rice` Thai Rice) use real photos (`dish-plating.jpg`,
+  `dish-fine-dining.jpg`); the rest have no `image` set, which renders as a
+  clean "Photo coming soon" state. Add an `image` field per item as real,
+  dish-specific photography comes in — the warm maroon/gold SVG placeholders
+  (`placeholder-dish-*.svg`) are still in `public/` if you'd rather use those
+  as a visual filler than the empty state.
 - **About gallery** — `app/about/page.tsx` uses `about-story.jpg`,
   `kitchen-chefs-table.jpg`, and the four images in `interior-*.jpg` /
   `table-wine-glasses.jpg`.
@@ -109,5 +115,7 @@ site with local data, no external services to configure.
 ## Notes
 
 - All four pages are statically generated at build time.
-- Menu, About, and Contact copy is placeholder content, clearly marked in
-  the source, ready to be replaced with real content.
+- The menu (`data/menu.ts`) and restaurant details (`data/restaurant.ts`)
+  are real content. About page copy is still placeholder text, clearly
+  marked in the source, ready to be replaced with the real story from the
+  owner.
