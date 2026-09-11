@@ -72,19 +72,21 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <MotionSection className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-            Why Sri Lakshmi
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-charcoal sm:text-4xl">
-            A family restaurant, in every sense
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURES.map((feature) => (
-            <FeatureCard key={feature.title} {...feature} />
-          ))}
+      <MotionSection className="bg-charcoal py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              Why Sri Lakshmi
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">
+              A family restaurant, in every sense
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {FEATURES.map((feature) => (
+              <FeatureCard key={feature.title} {...feature} />
+            ))}
+          </div>
         </div>
       </MotionSection>
 

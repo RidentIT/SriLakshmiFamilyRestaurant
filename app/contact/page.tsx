@@ -15,7 +15,7 @@ const SERVICES = [
 
 export default function ContactPage() {
   return (
-    <div className="py-10 sm:py-14">
+    <div className="pt-28 pb-10 sm:pt-32 sm:pb-14">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
           Contact &amp; Location
