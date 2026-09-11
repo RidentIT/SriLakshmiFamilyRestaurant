@@ -70,7 +70,7 @@ export default function Navbar() {
           <li>
             <a
               href={RESTAURANT.phoneHref}
-              className="text-sm font-bold text-gold underline decoration-2 underline-offset-4 transition-colors hover:text-gold/80"
+              className="text-sm font-bold text-gold transition-colors hover:text-gold/80"
             >
               Reserve
             </a>
@@ -136,7 +136,7 @@ export default function Navbar() {
             <a
               href={RESTAURANT.phoneHref}
               onClick={() => setOpen(false)}
-              className="flex h-12 items-center justify-center text-base font-bold text-gold underline decoration-2 underline-offset-4"
+              className="flex h-12 items-center justify-center text-base font-bold text-gold"
             >
               Reserve · {RESTAURANT.phoneDisplay}
             </a>
