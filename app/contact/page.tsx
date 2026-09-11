@@ -15,29 +15,29 @@ const SERVICES = [
 
 export default function ContactPage() {
   return (
-    <div className="pt-28 pb-10 sm:pt-32 sm:pb-14">
+    <div className="min-h-screen bg-charcoal pt-28 pb-10 sm:pt-32 sm:pb-14">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
           Contact &amp; Location
         </p>
-        <h1 className="mt-3 font-display text-4xl font-semibold text-charcoal sm:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-semibold text-cream sm:text-5xl">
           Find us, call us, come say hello
         </h1>
       </div>
 
       <MotionSection className="mx-auto mt-14 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-maroon/5 sm:p-10">
-            <h2 className="font-display text-xl font-semibold text-maroon">
+          <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 sm:p-10">
+            <h2 className="font-display text-xl font-semibold text-gold">
               {RESTAURANT.name}
             </h2>
 
             <dl className="mt-6 space-y-6">
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wide text-charcoal/50">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-cream/45">
                   Address
                 </dt>
-                <dd className="mt-1 text-base leading-relaxed text-charcoal/80">
+                <dd className="mt-1 text-base leading-relaxed text-cream/80">
                   {RESTAURANT.addressLines.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
@@ -45,13 +45,13 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wide text-charcoal/50">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-cream/45">
                   Phone
                 </dt>
                 <dd className="mt-1">
                   <a
                     href={RESTAURANT.phoneHref}
-                    className="text-lg font-semibold text-maroon underline decoration-gold/50 underline-offset-4 hover:text-maroon-dark"
+                    className="text-lg font-semibold text-gold underline decoration-gold/40 underline-offset-4 hover:text-gold/80"
                   >
                     {RESTAURANT.phoneDisplay}
                   </a>
@@ -59,33 +59,33 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wide text-charcoal/50">
+                <dt className="text-xs font-semibold uppercase tracking-wide text-cream/45">
                   Hours
                 </dt>
-                <dd className="mt-1 text-base text-charcoal/80">
+                <dd className="mt-1 text-base text-cream/80">
                   {RESTAURANT.hoursDisplay} &middot; {RESTAURANT.hoursNote}
                 </dd>
               </div>
             </dl>
 
-            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-maroon/10 pt-6">
+            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-white/10 pt-6">
               {SERVICES.map((service) => (
                 <div
                   key={service.label}
                   className={`rounded-xl px-3 py-3 text-center ${
-                    service.available ? "bg-maroon/8" : "bg-charcoal/5"
+                    service.available ? "bg-gold/10" : "bg-white/5"
                   }`}
                 >
                   <p
                     className={`text-sm font-semibold ${
-                      service.available ? "text-maroon" : "text-charcoal/40"
+                      service.available ? "text-gold" : "text-cream/35"
                     }`}
                   >
                     {service.label}
                   </p>
                   <p
                     className={`mt-1 text-xs ${
-                      service.available ? "text-charcoal/60" : "text-charcoal/40"
+                      service.available ? "text-cream/60" : "text-cream/35"
                     }`}
                   >
                     {service.available ? "Available" : "Not yet available"}
@@ -98,13 +98,13 @@ export default function ContactPage() {
               href={RESTAURANT.mapsDirectionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex h-12 w-full items-center justify-center rounded-full bg-maroon px-6 text-sm font-semibold text-cream transition-colors hover:bg-maroon-dark sm:w-auto"
+              className="mt-8 inline-flex h-12 w-full items-center justify-center rounded-full bg-gold px-6 text-sm font-semibold text-maroon-dark transition-colors hover:bg-gold/90 sm:w-auto"
             >
               Get Directions
             </a>
           </div>
 
-          <div className="overflow-hidden rounded-3xl shadow-sm ring-1 ring-maroon/5">
+          <div className="overflow-hidden rounded-3xl ring-1 ring-white/10">
             <iframe
               title={`Map showing the location of ${RESTAURANT.name}`}
               src={RESTAURANT.mapsEmbedSrc}
@@ -121,15 +121,15 @@ export default function ContactPage() {
         id="reserve"
         className="mx-auto mt-20 max-w-6xl px-4 pb-8 sm:px-6 lg:px-8"
       >
-        <div className="overflow-hidden rounded-3xl bg-maroon text-center text-cream shadow-xl shadow-maroon/20">
+        <div className="overflow-hidden rounded-3xl bg-white/5 text-center ring-1 ring-gold/20">
           <div className="mx-auto max-w-xl px-6 py-14 sm:px-10 sm:py-16">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
               Reserve a Table
             </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">
               Planning a family gathering?
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-cream/85">
+            <p className="mt-4 text-base leading-relaxed text-cream/70">
               We don&apos;t take bookings online yet — but with seating for
               up to {RESTAURANT.seatingCapacity} guests, we can almost always
               find you a table. Give us a call and we&apos;ll get you sorted.
