@@ -127,21 +127,21 @@ export default function HomePage() {
       </MotionSection>
 
       <MotionSection className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-        <div className="overflow-hidden rounded-3xl bg-maroon text-cream shadow-xl shadow-maroon/20">
+        <div className="overflow-hidden rounded-3xl bg-gold text-charcoal shadow-xl shadow-gold/20">
           <div className="grid gap-10 p-8 sm:p-12 md:grid-cols-2 md:items-center md:p-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-maroon-dark">
                 Visit Us
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
                 Come see us today
               </h2>
-              <address className="mt-6 space-y-1 text-base not-italic leading-relaxed text-cream/85">
+              <address className="mt-6 space-y-1 text-base not-italic leading-relaxed text-charcoal/80">
                 {RESTAURANT.addressLines.map((line) => (
                   <p key={line}>{line}</p>
                 ))}
               </address>
-              <p className="mt-4 text-base font-medium text-gold">
+              <p className="mt-4 text-base font-semibold text-maroon-dark">
                 {RESTAURANT.hoursDisplay}
               </p>
 
@@ -150,34 +150,34 @@ export default function HomePage() {
                   href={RESTAURANT.mapsDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-gold px-6 text-sm font-semibold text-maroon-dark transition-colors hover:bg-gold/90"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-maroon px-6 text-sm font-semibold text-cream transition-colors hover:bg-maroon-dark"
                 >
                   Get Directions
                 </a>
                 <a
                   href={RESTAURANT.phoneHref}
-                  className="inline-flex h-12 items-center justify-center rounded-full border-2 border-cream/60 px-6 text-sm font-semibold text-cream transition-colors hover:border-cream hover:bg-cream/10"
+                  className="inline-flex h-12 items-center justify-center rounded-full border-2 border-charcoal/40 px-6 text-sm font-semibold text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal/5"
                 >
                   {RESTAURANT.phoneDisplay}
                 </a>
               </div>
             </div>
 
-            <dl className="grid grid-cols-2 gap-6 border-t border-cream/15 pt-8 text-sm md:border-l md:border-t-0 md:pl-10 md:pt-0">
+            <dl className="grid grid-cols-2 gap-6 border-t border-charcoal/15 pt-8 text-sm md:border-l md:border-t-0 md:pl-10 md:pt-0">
               <div>
-                <dt className="text-cream/60">Dine-In</dt>
+                <dt className="text-charcoal/60">Dine-In</dt>
                 <dd className="mt-1 font-display text-lg font-semibold">Available</dd>
               </div>
               <div>
-                <dt className="text-cream/60">Takeaway</dt>
+                <dt className="text-charcoal/60">Takeaway</dt>
                 <dd className="mt-1 font-display text-lg font-semibold">Available</dd>
               </div>
               <div>
-                <dt className="text-cream/60">Delivery</dt>
+                <dt className="text-charcoal/60">Delivery</dt>
                 <dd className="mt-1 font-display text-lg font-semibold">Coming Soon</dd>
               </div>
               <div>
-                <dt className="text-cream/60">Seating</dt>
+                <dt className="text-charcoal/60">Seating</dt>
                 <dd className="mt-1 font-display text-lg font-semibold">Up to 80 guests</dd>
               </div>
             </dl>

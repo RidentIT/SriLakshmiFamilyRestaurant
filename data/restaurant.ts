@@ -14,8 +14,8 @@ export const RESTAURANT = {
   address: ADDRESS,
   addressLines: ["Jaffna Road, Sandamalgama", "Rambewa, Anuradhapura"],
 
-  phoneDisplay: "077 727 3794",
-  phoneHref: "tel:+94777273794",
+  phoneDisplay: "025 22 555 44",
+  phoneHref: "tel:+94252255544",
 
   hoursDisplay: "Open 24 Hours",
   hoursNote: "Every day, including public holidays",
