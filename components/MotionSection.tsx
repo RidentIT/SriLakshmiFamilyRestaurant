@@ -12,9 +12,14 @@ type MotionSectionProps = {
 };
 
 /**
- * Fades and slides content up as it enters the viewport. Content is always
- * present in the DOM (no display:none), and falls back to a static render
- * for users with prefers-reduced-motion so it never blocks readability.
+ * Fades and slides CONTENT up as it enters the viewport. The outer
+ * section/div — which usually carries a background color via `className`
+ * — is a plain, unanimated element; only an inner wrapper animates.
+ *
+ * This matters: animating opacity on the section itself would fade its
+ * background too, letting the page's base background show through behind
+ * a below-the-fold dark section until it scrolls far enough to trigger.
+ * Keeping the background permanently opaque avoids that gap entirely.
  */
 export default function MotionSection({
   children,
@@ -24,19 +29,18 @@ export default function MotionSection({
   id,
 }: MotionSectionProps) {
   const reduceMotion = useReducedMotion();
+  const Wrapper = as;
 
   const motionProps = {
-    className,
-    id,
     initial: reduceMotion ? undefined : { opacity: 0, y: 28 },
     whileInView: reduceMotion ? undefined : { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 as const },
     transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as const },
   };
 
-  if (as === "div") {
-    return <motion.div {...motionProps}>{children}</motion.div>;
-  }
-
-  return <motion.section {...motionProps}>{children}</motion.section>;
+  return (
+    <Wrapper className={className} id={id}>
+      <motion.div {...motionProps}>{children}</motion.div>
+    </Wrapper>
+  );
 }
