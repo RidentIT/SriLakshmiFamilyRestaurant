@@ -17,12 +17,12 @@ const GALLERY = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-28 pb-10 sm:pt-32 sm:pb-14">
+    <div className="min-h-screen bg-charcoal pt-28 pb-10 sm:pt-32 sm:pb-14">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
           About Us
         </p>
-        <h1 className="mt-3 font-display text-4xl font-semibold text-charcoal sm:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-semibold text-cream sm:text-5xl">
           A family table, open to everyone
         </h1>
       </div>
@@ -36,10 +36,10 @@ export default function AboutPage() {
       <MotionSection className="mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div>
-            <h2 className="font-display text-2xl font-semibold text-maroon sm:text-3xl">
+            <h2 className="font-display text-2xl font-semibold text-gold sm:text-3xl">
               Our Story
             </h2>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-charcoal/75">
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-cream/70">
               <p>
                 Sri Lakshmi Family Restaurant began as a small family kitchen
                 on Jaffna Road, born from a simple idea: feed people the way
@@ -57,7 +57,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="relative aspect-square overflow-hidden rounded-3xl bg-maroon/5 shadow-sm">
+          <div className="relative aspect-square overflow-hidden rounded-3xl bg-white/5 shadow-sm">
             <Image
               src="/about-story.jpg"
               alt="Inside Sri Lakshmi Family Restaurant"
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       <MotionSection className="mx-auto mt-20 max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-          <div className="relative aspect-square overflow-hidden rounded-3xl bg-maroon/5 shadow-sm md:order-2">
+          <div className="relative aspect-square overflow-hidden rounded-3xl bg-white/5 shadow-sm md:order-2">
             <Image
               src="/kitchen-chefs-table.jpg"
               alt="Our kitchen team at work"
@@ -81,10 +81,10 @@ export default function AboutPage() {
             />
           </div>
           <div className="md:order-1">
-            <h2 className="font-display text-2xl font-semibold text-maroon sm:text-3xl">
+            <h2 className="font-display text-2xl font-semibold text-gold sm:text-3xl">
               What Makes Us Special
             </h2>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-charcoal/75">
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-cream/70">
               <p>
                 It&apos;s the little things: curries simmered slowly instead
                 of rushed, a warm greeting when you walk in, and staff who
@@ -104,14 +104,14 @@ export default function AboutPage() {
       </MotionSection>
 
       <MotionSection className="mx-auto mt-20 max-w-6xl px-4 pb-8 sm:px-6 lg:px-8">
-        <h2 className="font-display text-2xl font-semibold text-charcoal sm:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-cream sm:text-3xl">
           A Look Around
         </h2>
         <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
           {GALLERY.map((image) => (
             <div
               key={image.src}
-              className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-maroon/5 shadow-sm"
+              className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5 shadow-sm"
             >
               <Image
                 src={image.src}
