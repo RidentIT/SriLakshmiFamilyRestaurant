@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function MenuPage() {
   return (
-    <div className="pt-28 pb-10 sm:pt-32 sm:pb-14">
+    <div className="min-h-screen bg-charcoal pt-28 pb-10 sm:pt-32 sm:pb-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
           Our Menu
         </p>
-        <h1 className="mt-3 font-display text-4xl font-semibold text-charcoal sm:text-5xl">
+        <h1 className="mt-3 font-display text-4xl font-semibold text-cream sm:text-5xl">
           Something for everyone
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-charcoal/70">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70">
           All dishes are prepared fresh to order.
         </p>
       </div>

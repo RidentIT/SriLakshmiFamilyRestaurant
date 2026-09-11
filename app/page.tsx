@@ -3,8 +3,22 @@ import Hero from "@/components/Hero";
 import MotionSection from "@/components/MotionSection";
 import FeatureCard from "@/components/FeatureCard";
 import DishCard from "@/components/DishCard";
+import PhotoGallery from "@/components/PhotoGallery";
 import { menuCategories } from "@/data/menu";
 import { RESTAURANT } from "@/data/restaurant";
+
+const GALLERY_IMAGES = [
+  { src: "/ares1.jpg", alt: "Elegant dining room with a marble bar" },
+  { src: "/ares2.jpg", alt: "Warmly lit dining hall seating" },
+  { src: "/ares3.jpg", alt: "Chef searing a dish over open flame" },
+  { src: "/ares4.jpg", alt: "Buffet spread at golden hour" },
+  { src: "/ares5.jpg", alt: "Cozy counter seating in the evening" },
+  { src: "/ares6.jpg", alt: "Chef finishing a plated dish" },
+  { src: "/ares7.jpg", alt: "A spread of shared dishes on the table" },
+  { src: "/ares8.jpg", alt: "Sauce being drizzled over a dish" },
+  { src: "/ares9.jpg", alt: "Friends sharing a meal together" },
+  { src: "/ares10.jpg", alt: "A toast shared around the table" },
+];
 
 const FEATURED_ITEM_IDS = [
   "fr-chicken",
@@ -126,62 +140,36 @@ export default function HomePage() {
         </div>
       </MotionSection>
 
-      <MotionSection className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-        <div className="overflow-hidden rounded-3xl bg-gold text-charcoal shadow-xl shadow-gold/20">
-          <div className="grid gap-10 p-8 sm:p-12 md:grid-cols-2 md:items-center md:p-16">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-maroon-dark">
-                Visit Us
-              </p>
-              <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
-                Come see us today
-              </h2>
-              <address className="mt-6 space-y-1 text-base not-italic leading-relaxed text-charcoal/80">
-                {RESTAURANT.addressLines.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </address>
-              <p className="mt-4 text-base font-semibold text-maroon-dark">
-                {RESTAURANT.hoursDisplay}
-              </p>
+      <MotionSection className="bg-charcoal py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            Visit Us
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">
+            A glimpse inside Sri Lakshmi
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-cream/70">
+            Swipe through the dining room, the kitchen, and the moments that
+            happen around our tables.
+          </p>
+        </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={RESTAURANT.mapsDirectionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-maroon px-6 text-sm font-semibold text-cream transition-colors hover:bg-maroon-dark"
-                >
-                  Get Directions
-                </a>
-                <a
-                  href={RESTAURANT.phoneHref}
-                  className="inline-flex h-12 items-center justify-center rounded-full border-2 border-charcoal/40 px-6 text-sm font-semibold text-charcoal transition-colors hover:border-charcoal hover:bg-charcoal/5"
-                >
-                  {RESTAURANT.phoneDisplay}
-                </a>
-              </div>
-            </div>
+        <div className="mt-12">
+          <PhotoGallery images={GALLERY_IMAGES} />
+        </div>
 
-            <dl className="grid grid-cols-2 gap-6 border-t border-charcoal/15 pt-8 text-sm md:border-l md:border-t-0 md:pl-10 md:pt-0">
-              <div>
-                <dt className="text-charcoal/60">Dine-In</dt>
-                <dd className="mt-1 font-display text-lg font-semibold">Available</dd>
-              </div>
-              <div>
-                <dt className="text-charcoal/60">Takeaway</dt>
-                <dd className="mt-1 font-display text-lg font-semibold">Available</dd>
-              </div>
-              <div>
-                <dt className="text-charcoal/60">Delivery</dt>
-                <dd className="mt-1 font-display text-lg font-semibold">Coming Soon</dd>
-              </div>
-              <div>
-                <dt className="text-charcoal/60">Seating</dt>
-                <dd className="mt-1 font-display text-lg font-semibold">Up to 80 guests</dd>
-              </div>
-            </dl>
-          </div>
+        <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center gap-4 px-4 text-center sm:px-6 lg:px-8">
+          <address className="text-sm not-italic leading-relaxed text-cream/70">
+            {RESTAURANT.addressLines.join(", ")} &middot; {RESTAURANT.hoursDisplay}
+          </address>
+          <a
+            href={RESTAURANT.mapsDirectionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-sm font-semibold text-maroon-dark transition-colors hover:bg-gold/90"
+          >
+            Get Directions
+          </a>
         </div>
       </MotionSection>
     </>

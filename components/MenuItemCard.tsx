@@ -6,15 +6,15 @@ import PriceTag from "@/components/PriceTag";
 // is reserved for the home page's hand-picked "Featured Dishes".
 export default function MenuItemCard({ item }: { item: MenuItem }) {
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm shadow-maroon/5 ring-1 ring-maroon/5 sm:p-5">
+    <div className="rounded-2xl bg-white/5 p-4 shadow-sm ring-1 ring-white/10 sm:p-5">
       <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-        <h3 className="font-display text-lg font-semibold text-charcoal">
+        <h3 className="font-display text-lg font-semibold text-cream">
           {item.name}
         </h3>
         {item.pricing.kind === "single" && <PriceTag pricing={item.pricing} />}
       </div>
       {item.description && (
-        <p className="mt-2 text-sm leading-relaxed text-charcoal/65">
+        <p className="mt-2 text-sm leading-relaxed text-cream/60">
           {item.description}
         </p>
       )}

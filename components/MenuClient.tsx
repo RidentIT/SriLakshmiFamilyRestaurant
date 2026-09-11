@@ -48,7 +48,7 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
 
   return (
     <div className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
-      <div className="sticky top-16 z-30 -mx-4 bg-cream/95 px-4 pb-4 pt-4 backdrop-blur supports-[backdrop-filter]:bg-cream/85 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+      <div className="sticky top-16 z-30 -mx-4 bg-charcoal/95 px-4 pb-4 pt-4 backdrop-blur supports-[backdrop-filter]:bg-charcoal/90 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <label htmlFor="menu-search" className="sr-only">
           Search the menu
         </label>
@@ -58,7 +58,7 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
-            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-charcoal/40"
+            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-cream/40"
           >
             <circle cx="11" cy="11" r="7" />
             <path strokeLinecap="round" d="m20 20-3.5-3.5" />
@@ -69,7 +69,7 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search the menu, e.g. kottu, juice, rice..."
-            className="h-12 w-full rounded-full border border-maroon/15 bg-white pl-11 pr-4 text-sm text-charcoal shadow-sm outline-none placeholder:text-charcoal/40 focus:border-maroon/40 focus:ring-2 focus:ring-gold/40"
+            className="h-12 w-full rounded-full border border-cream/15 bg-white/10 pl-11 pr-4 text-sm text-cream shadow-sm outline-none placeholder:text-cream/40 focus:border-gold/50 focus:ring-2 focus:ring-gold/40"
           />
         </div>
 
@@ -81,8 +81,8 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
                 href={`#${category.slug}`}
                 className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   activeSlug === category.slug
-                    ? "bg-maroon text-cream"
-                    : "bg-maroon/8 text-charcoal/70 hover:bg-maroon/15"
+                    ? "bg-gold text-maroon-dark"
+                    : "bg-white/10 text-cream/70 hover:bg-white/15"
                 }`}
               >
                 {category.name}
@@ -102,8 +102,8 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
                     href={`#${category.slug}`}
                     className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                       activeSlug === category.slug
-                        ? "bg-maroon/10 text-maroon"
-                        : "text-charcoal/60 hover:bg-maroon/5 hover:text-charcoal"
+                        ? "bg-gold/10 text-gold"
+                        : "text-cream/60 hover:bg-white/5 hover:text-cream"
                     }`}
                   >
                     {category.name}
@@ -116,7 +116,7 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
 
         <div className={isSearching ? "lg:col-span-2" : ""}>
           {!hasResults && (
-            <p className="rounded-2xl bg-white p-8 text-center text-sm text-charcoal/60 shadow-sm ring-1 ring-maroon/5">
+            <p className="rounded-2xl bg-white/5 p-8 text-center text-sm text-cream/60 shadow-sm ring-1 ring-white/10">
               No dishes found for &ldquo;{query}&rdquo;. Try a different search.
             </p>
           )}
@@ -132,11 +132,11 @@ export default function MenuClient({ categories }: { categories: MenuCategory[] 
                 }}
               >
                 <div className="border-b border-gold/30 pb-3">
-                  <h2 className="font-display text-2xl font-semibold text-maroon">
+                  <h2 className="font-display text-2xl font-semibold text-gold">
                     {category.name}
                   </h2>
                   {category.note && (
-                    <p className="mt-1 text-sm text-charcoal/60">{category.note}</p>
+                    <p className="mt-1 text-sm text-cream/60">{category.note}</p>
                   )}
                 </div>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
