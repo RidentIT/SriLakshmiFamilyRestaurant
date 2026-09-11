@@ -61,7 +61,7 @@ export const menuCategories: MenuCategory[] = [
         id: "rc-chicken",
         name: "Chicken Rice & Curry",
         description: "Steamed rice with chicken curry, dhal and seasonal vegetables.",
-        image: "/placeholder-dish-1.svg",
+        image: "/dish-plating.jpg",
         pricing: {
           kind: "sized",
           sizes: [
@@ -83,7 +83,7 @@ export const menuCategories: MenuCategory[] = [
         id: "rc-special",
         name: "Special Rice & Curry",
         description: "Rice & curry with your choice of chicken, seafood, or mixed.",
-        image: "/placeholder-dish-3.svg",
+        image: "/dish-fine-dining.jpg",
         pricing: {
           kind: "variant",
           variants: [

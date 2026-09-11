@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const GALLERY = [
-  { src: "/about-gallery-1.svg", alt: "Our kitchen" },
-  { src: "/about-gallery-2.svg", alt: "Our dining hall" },
-  { src: "/about-gallery-3.svg", alt: "Our family" },
-  { src: "/about-gallery-4.svg", alt: "Our dishes" },
+  { src: "/interior-dining-room.jpg", alt: "Our dining room" },
+  { src: "/interior-cafe-bright.jpg", alt: "A warm welcome" },
+  { src: "/table-wine-glasses.jpg", alt: "Table settings" },
+  { src: "/interior-modern-dining.jpg", alt: "More of our space" },
 ];
 
 export default function AboutPage() {
@@ -59,10 +59,9 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-square overflow-hidden rounded-3xl bg-maroon/5 shadow-sm">
             <Image
-              src="/about-gallery-1.svg"
-              alt="Our kitchen"
+              src="/about-story.jpg"
+              alt="Inside Sri Lakshmi Family Restaurant"
               fill
-              unoptimized
               className="object-cover"
               sizes="(min-width: 768px) 40vw, 90vw"
             />
@@ -74,10 +73,9 @@ export default function AboutPage() {
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div className="relative aspect-square overflow-hidden rounded-3xl bg-maroon/5 shadow-sm md:order-2">
             <Image
-              src="/about-gallery-2.svg"
-              alt="Our dining hall"
+              src="/kitchen-chefs-table.jpg"
+              alt="Our kitchen team at work"
               fill
-              unoptimized
               className="object-cover"
               sizes="(min-width: 768px) 40vw, 90vw"
             />
@@ -119,7 +117,6 @@ export default function AboutPage() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                unoptimized
                 className="object-cover"
                 sizes="(min-width: 1024px) 22vw, 45vw"
               />

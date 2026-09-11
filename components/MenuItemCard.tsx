@@ -11,7 +11,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
             src={item.image}
             alt={item.name}
             fill
-            unoptimized
+            unoptimized={item.image.endsWith(".svg")}
             className="object-cover"
             sizes="96px"
           />

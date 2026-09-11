@@ -48,11 +48,10 @@ export default function Hero() {
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-charcoal">
       {/* Fallback image — always present, drives LCP */}
       <Image
-        src="/hero-fallback.svg"
+        src="/hero-cooking.jpg"
         alt=""
         fill
         priority
-        unoptimized
         className="object-cover"
         sizes="100vw"
       />

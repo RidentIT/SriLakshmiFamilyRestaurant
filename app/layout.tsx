@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description: RESTAURANT.description,
     type: "website",
     locale: "en_LK",
+    images: ["/logo.jpg"],
   },
 };
 

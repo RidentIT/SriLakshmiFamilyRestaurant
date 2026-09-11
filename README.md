@@ -56,28 +56,36 @@ Restaurant details (address, phone, hours, services, map links) live in
 **[`data/restaurant.ts`](data/restaurant.ts)** — update that file if any of
 those details change.
 
-## Replacing placeholder media
+## Media
 
-Placeholder SVG images (warm maroon/gold graphics with a text label) stand
-in for real photography so the layout can be reviewed before real assets
-exist. Swap them by adding real photos to `public/` with the same
-filenames the components already reference:
+- **Logo** — `public/logo.jpg`, shown via `components/Logo.tsx`, used in the
+  navbar, footer, browser tab icon (`app/icon.jpg`), and social share
+  preview. The source artwork also contains a divider line and a phone
+  number below the wordmark that doesn't match the restaurant's real
+  number, so `Logo.tsx` crops to the top ~70% (lotus mark + wordmark only)
+  — if you get an updated/corrected logo file, replace `public/logo.jpg`
+  and `app/icon.jpg` and re-check that crop still looks right.
+- **Hero** — `components/Hero.tsx` uses `public/hero-cooking.jpg` as the
+  always-visible fallback/LCP image, with an optional
+  `public/hero-video.mp4` layered on top once it's playable (absent right
+  now — the hero gracefully shows the fallback image only, which is a
+  complete design on its own).
+- **Dish photos** — two menu items in `data/menu.ts` (`rc-chicken`,
+  `rc-special`) use real photos (`dish-plating.jpg`, `dish-fine-dining.jpg`);
+  the rest still use the warm maroon/gold SVG placeholders. Update the
+  `image` field per item as real, dish-specific photography comes in.
+- **About gallery** — `app/about/page.tsx` uses `about-story.jpg`,
+  `kitchen-chefs-table.jpg`, and the four images in `interior-*.jpg` /
+  `table-wine-glasses.jpg`.
+- `public/reslandin2.jpg` is **not used anywhere in the code** — it has a
+  visible stock-photo watermark tiled across it, so it isn't safe to
+  publish. Replace it with a licensed/original photo before referencing it,
+  or delete it.
 
-- `public/hero-fallback.jpg` (or update the path in `components/Hero.tsx`)
-  — the hero background image, and the always-visible fallback if the
-  video doesn't play.
-- `public/hero-video.mp4` — optional looping background video for the
-  hero. If this file is absent (as it is right now) or fails to load, the
-  hero gracefully shows the fallback image instead — no code changes
-  needed either way.
-- `public/placeholder-dish-1.svg` … `placeholder-dish-6.svg` — referenced
-  from `data/menu.ts` per item; update the `image` path per item as real
-  dish photos become available.
-- `public/about-gallery-1.svg` … `about-gallery-4.svg` — referenced from
-  `app/about/page.tsx`.
-
-When swapping an SVG placeholder for a real `.jpg`/`.png`, also remove the
-`unoptimized` prop from that `<Image>` so Next.js optimizes it.
+When adding a new real photo, don't pass the `unoptimized` prop on its
+`<Image>` — that's only needed for the SVG placeholders (`DishCard` and
+`MenuItemCard` already handle this automatically based on the file
+extension).
 
 ## Deploying to Vercel
 

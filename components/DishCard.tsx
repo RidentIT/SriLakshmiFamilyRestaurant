@@ -11,7 +11,7 @@ export default function DishCard({ item }: { item: MenuItem }) {
             src={item.image}
             alt={item.name}
             fill
-            unoptimized
+            unoptimized={item.image.endsWith(".svg")}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 40vw, 90vw"
           />
