@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Logo from "@/components/Logo";
 import { NAV_LINKS, RESTAURANT } from "@/data/restaurant";
 
 export default function Navbar() {
@@ -13,8 +12,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/15 bg-charcoal/95 backdrop-blur supports-[backdrop-filter]:bg-charcoal/90">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" onClick={() => setOpen(false)}>
-          <Logo className="h-11 sm:h-12" />
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          className="flex flex-col leading-tight"
+        >
+          <span className="font-display text-lg font-semibold tracking-tight text-cream sm:text-xl">
+            Sri Lakshmi
+          </span>
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold sm:text-xs">
+            Family Restaurant
+          </span>
         </Link>
 
         {/* Desktop links */}
