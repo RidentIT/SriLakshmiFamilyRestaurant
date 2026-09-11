@@ -18,18 +18,18 @@ export default function Footer() {
           <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Visit Us
           </h3>
-          <address className="mt-3 space-y-1 text-sm not-italic leading-relaxed text-cream/80">
+          <address className="mt-3 flex flex-col gap-1.5 text-sm not-italic leading-relaxed text-cream/80">
             {RESTAURANT.addressLines.map((line) => (
               <p key={line}>{line}</p>
             ))}
+            <a
+              href={RESTAURANT.phoneHref}
+              className="font-medium text-cream underline decoration-gold/60 underline-offset-4 hover:text-gold"
+            >
+              {RESTAURANT.phoneDisplay}
+            </a>
+            <p>{RESTAURANT.hoursDisplay}</p>
           </address>
-          <a
-            href={RESTAURANT.phoneHref}
-            className="mt-3 inline-block text-sm font-medium text-cream underline decoration-gold/60 underline-offset-4 hover:text-gold"
-          >
-            {RESTAURANT.phoneDisplay}
-          </a>
-          <p className="mt-1 text-sm text-cream/80">{RESTAURANT.hoursDisplay}</p>
         </div>
 
         <div>

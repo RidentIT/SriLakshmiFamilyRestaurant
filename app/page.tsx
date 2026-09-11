@@ -9,7 +9,7 @@ import { RESTAURANT } from "@/data/restaurant";
 
 const GALLERY_IMAGES = [
   { src: "/ares1.jpg", alt: "Elegant dining room with a marble bar" },
-  { src: "/ares2.jpg", alt: "Warmly lit dining hall seating" },
+  { src: "/ares11.jpg", alt: "Warmly lit dining hall seating" },
   { src: "/ares3.jpg", alt: "Chef searing a dish over open flame" },
   { src: "/ares4.jpg", alt: "Buffet spread at golden hour" },
   { src: "/ares5.jpg", alt: "Cozy counter seating in the evening" },
