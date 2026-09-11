@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --color-maroon: #6b1220;
+  --color-maroon-dark: #4a0c16;
+  --color-gold: #c9a227;
+  --color-cream: #f7f1e6;
+  --color-charcoal: #231f1b;
+}
+
+@theme inline {
+  --color-maroon: var(--color-maroon);
+  --color-maroon-dark: var(--color-maroon-dark);
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+  --color-charcoal: var(--color-charcoal);
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+/* Offsets anchor scrolling (menu category tabs, #reserve) so content
+   doesn't land underneath the sticky nav bar. */
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-maroon-dark);
+}
