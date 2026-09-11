@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-black/10 bg-charcoal text-cream/90">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <Logo className="h-14 w-[5.5rem]" />
+          <Logo className="h-14" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/70">
             {RESTAURANT.tagline}
           </p>

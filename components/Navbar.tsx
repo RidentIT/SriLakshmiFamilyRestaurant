@@ -11,10 +11,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/75">
+    <header className="sticky top-0 z-50 border-b border-gold/15 bg-charcoal/95 backdrop-blur supports-[backdrop-filter]:bg-charcoal/90">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" onClick={() => setOpen(false)}>
-          <Logo className="h-11 w-[4.3rem] sm:h-12 sm:w-[4.7rem]" />
+          <Logo className="h-11 sm:h-12" />
         </Link>
 
         {/* Desktop links */}
@@ -28,8 +28,8 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative py-2 text-sm font-medium tracking-wide transition-colors hover:text-maroon ${
-                    active ? "text-maroon" : "text-charcoal/80"
+                  className={`relative py-2 text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+                    active ? "text-gold" : "text-cream/80"
                   }`}
                 >
                   {link.label}
@@ -56,7 +56,7 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-full text-maroon transition-colors hover:bg-maroon/10 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full text-cream transition-colors hover:bg-white/10 md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       <div
-        className={`overflow-hidden border-t border-black/5 bg-cream transition-[max-height] duration-300 ease-in-out md:hidden ${
+        className={`overflow-hidden border-t border-gold/15 bg-charcoal transition-[max-height] duration-300 ease-in-out md:hidden ${
           open ? "max-h-80" : "max-h-0 border-t-0"
         }`}
       >
@@ -96,8 +96,8 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className={`flex h-12 items-center rounded-lg px-3 text-base font-medium ${
                     active
-                      ? "bg-maroon/10 text-maroon"
-                      : "text-charcoal/80 hover:bg-maroon/5"
+                      ? "bg-gold/10 text-gold"
+                      : "text-cream/80 hover:bg-white/5"
                   }`}
                 >
                   {link.label}
