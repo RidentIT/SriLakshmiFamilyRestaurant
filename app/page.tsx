@@ -104,20 +104,20 @@ export default function HomePage() {
         </div>
       </MotionSection>
 
-      <MotionSection className="bg-maroon/5 py-20 sm:py-24">
+      <MotionSection className="bg-charcoal py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
                 Featured Dishes
               </p>
-              <h2 className="mt-3 font-display text-3xl font-semibold text-charcoal sm:text-4xl">
+              <h2 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">
                 A taste of what&apos;s cooking
               </h2>
             </div>
             <Link
               href="/menu"
-              className="hidden shrink-0 text-sm font-semibold text-maroon underline decoration-gold/50 underline-offset-4 hover:text-maroon-dark sm:inline-block"
+              className="hidden shrink-0 text-sm font-semibold text-gold underline decoration-gold/40 underline-offset-4 hover:text-gold/80 sm:inline-block"
             >
               View full menu &rarr;
             </Link>
@@ -132,7 +132,7 @@ export default function HomePage() {
           <div className="mt-10 text-center sm:hidden">
             <Link
               href="/menu"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-maroon px-8 text-sm font-semibold text-cream"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-sm font-semibold text-maroon-dark"
             >
               View Full Menu
             </Link>
